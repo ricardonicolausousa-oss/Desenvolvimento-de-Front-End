@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubra seu caminho no Front-End</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <h1>Descubra seu caminho no Front-End</h1>
+    <button type="button" id="botao-tema" class="botao botao-secundario">Alternar tema</button>
+  </header>
+
+  <main class="conteudo">
+    <section class="cartao">
+      <h2>Receba uma orientação personalizada</h2>
+
+      <div class="campo">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+      </div>
+
+      <div class="campo">
+        <label for="area">Área de interesse</label>
+        <select id="area">
+          <option value="">Selecione uma área</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+      </div>
+
+      <button type="button" id="botao-gerar" class="botao">Gerar orientação</button>
+
+      <p id="resultado" class="mensagem" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Projeto 3 — Painel Interativo com JavaScript</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

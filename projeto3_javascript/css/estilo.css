@@ -1,0 +1,114 @@
+:root {
+  --fundo: #f4f6fb;
+  --cartao: #ffffff;
+  --texto: #1f2430;
+  --destaque: #3b5bdb;
+  --destaque-hover: #2b44a8;
+  --borda: #d6dbe8;
+  --sucesso-fundo: #e6f6ec;
+  --sucesso-texto: #1b6b3a;
+  --erro-fundo: #fdeaea;
+  --erro-texto: #a12626;
+}
+
+body.tema-escuro {
+  --fundo: #14161c;
+  --cartao: #1f2330;
+  --texto: #eef0f6;
+  --destaque: #7c9cff;
+  --destaque-hover: #a3b8ff;
+  --borda: #3a4056;
+  --sucesso-fundo: #173825;
+  --sucesso-texto: #8fe0ae;
+  --erro-fundo: #3d1b1b;
+  --erro-texto: #ff9a9a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho h1 { margin: 0; font-size: 1.5rem; }
+
+.conteudo {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.cartao {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.campo { margin-bottom: 1rem; }
+
+.campo label { display: block; margin-bottom: 0.4rem; font-weight: bold; }
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--fundo);
+  color: var(--texto);
+}
+
+.botao {
+  padding: 0.65rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--destaque);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.botao:hover { background-color: var(--destaque-hover); transform: translateY(-1px); }
+
+.botao-secundario {
+  background-color: transparent;
+  color: var(--texto);
+  border: 1px solid var(--borda);
+}
+
+.botao-secundario:hover { background-color: var(--borda); }
+
+.mensagem { margin-top: 1.2rem; padding: 0; border-radius: 8px; }
+
+.mensagem.sucesso,
+.mensagem.erro { padding: 0.9rem; }
+
+.mensagem.sucesso { background-color: var(--sucesso-fundo); color: var(--sucesso-texto); }
+.mensagem.erro { background-color: var(--erro-fundo); color: var(--erro-texto); }
+
+.rodape { text-align: center; padding: 1rem; font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+  .cabecalho { flex-direction: column; text-align: center; padding: 1rem; }
+  .cabecalho h1 { font-size: 1.2rem; }
+  .cartao { padding: 1rem; }
+  .botao { width: 100%; }
+}
