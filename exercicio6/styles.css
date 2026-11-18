@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #6d8888;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  text-decoration: none;
+}
+/*Organização geral da página*/
+
+h2 {
+  color: black;
+}
+
+h3 {
+  color: white;
+  font-weight: 800;
+}
+
+.layoult-pagina {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.layoult-pagina a {
+  color: blue;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.layoult-pagina p {
+  color: darkslateblue;
+  font-weight: 600;
+  margin: 10px 0 6px 0;
+}
+
+/*Estilos do cabeçalho*/
+.cabecalho {
+  grid-area: header;
+  background-color: #a11a1a;
+  border: 2px solid white;
+  color: whitesmoke;
+  padding: 25px;
+  text-align: center;
+}
+.cabecalho h1 {
+  margin: 0 0 10px;
+}
+
+.cabecalho p {
+  color: whitesmoke;
+}
+
+/*menu da lateral esquerda*/
+
+.barra-lateral {
+  grid: sidebar;
+  background-color: seagreen;
+  padding: 20px;
+}
+
+.barra-lateral h3 {
+  margin: 10px 0 10px 0;
+  color: black;
+}
+
+.barra-lateral ul {
+  list-style: none;
+}
+
+.barra-lateral li {
+  margin-bottom: 10px;
+}
+
+.barra-lateral a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 13px;
+  border-radius: 6px;
+  margin: 10px 0 10px 0;
+  background-color: rgb(67, 167, 111);
+  transition:
+    background 0.3s ease,
+    transform 0.1s ease-in;
+}
+
+.barra-lateral a:hover {
+  transform: scale(1.08);
+  background-color: rgb(48, 113, 76);
+}
+
+.barra-lateral p {
+  margin: 10px 0 10px 0;
+}
+
+/*Grid dos Cards*/
+
+.grid-principal {
+  grid-area: main;
+  padding: 30px;
+}
+
+.grid-principal h2 {
+  color: black;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: black;
+  padding: 16px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-shadow: 3px 6px gray;
+}
+
+.card p {
+  line-height: 1.4;
+}
+
+.card a {
+  margin: 0 0 6px 0;
+  transition:
+    background 0.3s ease;
+}
+
+.card a:hover {
+  color: cornflowerblue;
+}
+
+/*rodape*/
+.rodape{
+    grid-area: footer;
+    background-color: #a11a1a;
+    color:white;
+    padding:16px;
+    text-align: center;
+}
